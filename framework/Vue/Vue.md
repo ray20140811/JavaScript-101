@@ -28,4 +28,3 @@ API 如何查看
 2. 在v-alert第一個區塊是Props,代表可以添加在標籤內的Property. 用法:  <v-alert border="bottom"></v-alert>
 3. Props的Name代表可用的屬性名,Type是類型,Default是預設值. 用法:  border="bottom"
 4. 如果Type是boolean,則直接加上該Props,會給true. 用法: <v-alert dense></v-alert>
-"""")])])])])])])])])]
