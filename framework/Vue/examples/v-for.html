@@ -2,18 +2,26 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>My first Vue app</title>
+        <title>v-for example</title>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
         <div id="app">
-            <p v-if="seen">現在你看到我了</p>
+            <ol>
+                <li v-fo="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
         </div>
         <script>
             var app = new Vue({
                 el: '#app',
                 data: {
-                    seen: true
+                    todos: [
+                        { text: '學習JavaScript' },
+                        { text: '學習 Vue' },
+                        { text: '做出項目' }
+                    ]
                 }
             })
         </script>

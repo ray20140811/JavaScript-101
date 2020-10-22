@@ -2,18 +2,24 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>My first Vue app</title>
+        <title>v-on example</title>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
         <div id="app">
-            <p v-if="seen">現在你看到我了</p>
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">反轉訊息</button>
         </div>
         <script>
             var app = new Vue({
                 el: '#app',
                 data: {
-                    seen: true
+                    message: 'Hello Vue.js!'
+                },
+                methods: {
+                    reverseMessage: function () {
+                        this.message = this.message.split('').reverse().join('')
+                    }
                 }
             })
         </script>

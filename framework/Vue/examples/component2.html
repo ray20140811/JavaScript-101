@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>component example</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <ol>
+                <!--創建一個 todo-item組件的實例-->
+                <linux-distribution v-for="item in linuxDistributionList" v-bind:distribution='item' v-bind:key="item.name">
+                </linux-distribution>
+            </ol>
+        </div>
+        <script>
+            Vue.component('linux-distribution', {
+                //template: '<li>這是個待辦事項!</li>'
+                props:['distribution'],
+                template: '<li>{{ distribution.name }} {{ distribution.version }}</li>'
+            })
+
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    linuxDistributionList: [
+                        { name: 'arch linux', version: '2.0.3' },
+                        { name: 'debian', version: '20.2.4' },
+                        { name: 'ubuntu', version: '8.7.3' }
+                    ]
+                }
+            })
+        </script>
+    </body>
+</html>

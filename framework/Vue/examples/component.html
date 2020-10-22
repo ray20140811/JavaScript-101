@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>component example</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <ol>
+                <!--創建一個 todo-item組件的實例-->
+                <todo-item
+                    v-for="item in groceryList"
+                    v-bind:todo='item'
+                    v-bin:key='item.id'
+                ></todo-item>
+            </ol>
+        </div>
+        <script>
+            Vue.component('todo-item', {
+                //template: '<li>這是個待辦事項!</li>'
+                props:['todo'],
+                template: '<li>{{ todo.text }}</li>'
+            })
+
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    groceryList: [
+                        { id: 0, text: '蔬菜' },
+                        { id: 1, text: '奶酪' },
+                        { id: 2, text: '隨便其它什麼人吃的東西'}
+                    ]
+                }
+            })
+        </script>
+    </body>
+</html>
