@@ -2,26 +2,18 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>component example</title>
+        <title>My first Vue app</title>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
         <div id="app">
-            <ol>
-                <!--創建一個 todo-item組件的實例-->
-                <
-            </ol>
+            <p v-if="seen">現在你看到我了</p>
         </div>
         <script>
-            Vue.component('app-nav', {
-                props: ['todo'],
-                template: '<li>{{todo.text}}<li>'
-            })
-
             var app = new Vue({
                 el: '#app',
                 data: {
-
+                    seen: true
                 }
             })
         </script>
