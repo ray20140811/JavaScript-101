@@ -1,16 +1,18 @@
-Index
-=====
+# String
 
-* [5 JavaScript內建物件]
-  * [5-1 JavaScript的內建物件]
-       * [5-1-2 JavaScript的內建物件]
-  * [5-2 JavaScript的String物件]
-  * [5-3 JavaScript的Array物件]
-       * [ 5-3-2 Array物件的屬性和方法]
+String的內容是不可變的,但可以重新賦值
+-------------------------------------
 
-# 5 JavaScript內建物件
-## 5-1 JavaScript的內建物件
-### 5-1-2 JavaScript的內建物件
+ex:
+    
+    var myStr = "Ray";
+    myStr[0] = "J";
+    myStr;              //Ray
+    myStr = "Jay";  
+    myStr;              //Jay
+
+
+# JavaScript內建物件
 
 Boolean物件
 -----------
