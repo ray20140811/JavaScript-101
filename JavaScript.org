@@ -1,0 +1,20 @@
+* 126 password hint checkbox
+
+** JS Event
+   - onmouseover, onmouseout
+   - alert
+
+** Get Elment
+   - id
+   - document.getElmentById
+
+** attribute operation
+   - obj.style.display='block'
+   - assign value
+   - dot
+   - quotation marks: ''
+   - class
+
+
+
+    
