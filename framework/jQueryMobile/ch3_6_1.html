@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jquery mobile</title>
+        <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+        <!-- <link rel="stylesheet" href="jquery.mobile-1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css"> -->
+        <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+
+        <div data-role="page" id="home">
+            <div data-role="header" data-theme="c">
+                <h1>ch3_6_1.html</h1>
+            </div>
+            <div data-role="content">
+                <p>jQuery Mobile預設佈景</p>
+            </div>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" class="ui-btn-active">佈景a</a></li>
+                    <li><a href="#" >佈景b</a></li>
+                    <li><a href="#" >佈景c</a></li>
+                    <li><a href="#" >佈景d</a></li>
+                    <li><a href="#" >佈景e</a></li>
+                </ul>
+            </div>
+            <a href="#" class="ui-btn">Anchor</a>
+            <button class="ui-btn">Button</button>
+
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" class="ui-btn-active">One</a></li>
+            </ul>
+        </div><!-- /navbar -->
+        <form>
+             <input id="filter-for-listview" data-type="search" placeholder="Type to search...">
+        </form>
+<ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+    <li><a href="#">Acura</a></li>
+    <li><a href="#">Audi</a></li>
+    <li><a href="#">BMW</a></li>
+    <li><a href="#">Cadillac</a></li>
+    <li><a href="#">Ferrari</a></li>
+</ul>
+    </body>
+</html>

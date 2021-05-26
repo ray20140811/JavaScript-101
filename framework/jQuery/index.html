@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js">
+
+        </script>
+    </head>
+    <body bgcolor='yellow'>
+        <form class="" action="index.html" method="post">
+            <input type="checkbox" name="" value="">
+            <input type="radio" name="" value="">
+            <input type="text" name="" value="">
+            <input type="button" name="" value="">
+        </form>
+
+        <form class="" action="index.html" method="post">
+            <input type="checkbox" name="" value="">
+            <input type="radio" name="" value="">
+            <input type="text" name="" value="">
+            <input type="button" name="" value="">
+        </form>
+
+        <input type="checkbox" name="" value="">
+        <input type="radio" name="" value="">
+        <input type="text" name="" value="">
+        <input type="button" name="" value="">
+
+        <div>Old content</div>
+        <div>Old content</div>
+        <div>Old content</div>
+        <div>Old content</div>
+        <a href="#">link1</a>
+        <a href="#">link2</a>
+        <a href="#">link3</a>
+        <a href="#">link4</a>
+        <a href="#">link5</a>
+        <a href="#">link6</a>
+        <script>
+            jQuery('div').hide();
+            jQuery('div').text('new content');
+            jQuery('div').addClass("updatedContent");
+            jQuery('div').show();
+            //alert('Page Contains ' + jQuery('a').length + ' <a> elements!');
+            //alert('Page Contains ' + jQuery(document.getElementsByTagName('a')).length + ' <a> Elements, And has a ' + jQuery(document.body).attr('bgcolor') + ' background');
+            alert('selected ' + jQuery('input', $('form')).length + ' inputs');
+
+            alert('selected ' + jQuery('input', document.forms[0]).length + ' inputs');
+
+            alert('selected ' + jQuery('input', 'body').length + ' inputs');
+        </script>
+
+    </body>
+</html>
