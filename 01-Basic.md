@@ -11,6 +11,19 @@ ex:
     myStr = "Jay";  
     myStr;              //Jay
 
+# Array的方法
+push()  將元素添加在原來Array的最後面
+pop()   從Array取出最後一個元素
+shift() 從Array取出第一個元素
+unshift() 將元素添加在Arra的第一個元素
+
+ex:
+
+    var myArray = ["Ray", 40, "Learing JavaScript"];
+    myArray.push("Good");
+    var popString = myArray.pop(); // popString為"Good", myArray為["Ray", 40, "Learing JavaScript"]
+    var shiftString = myArray.shift(); // shiftString為"Ray", myArray為[40, "Learing JavaScript"]
+    myArray.unshift("Happy");   // myArray為["Happy", 40, "Learing JavaScript"]
 
 # JavaScript內建物件
 
