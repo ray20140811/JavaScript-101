@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#div1 { width: 100px; height: 100px; background: red; }
+		.box { width: 200px; }
+	</style>
+</head>
+<body>
+	<!-- id的優先級大於clas,所以class定義的box無效 -->
+	<!-- <div id="div1" class="box"></div> -->
+	<div id="div1" onmouseover="document.getElementById('div1').style.width='200px'; document.getElementById('div1').style.height='200px';document.getElementById('div1').style.background='green'"></div>
+</body>
+</html>

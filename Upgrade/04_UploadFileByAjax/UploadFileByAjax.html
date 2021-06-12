@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form id="uploadForm" class="" action="index.html" method="post">
+        <input name="file" id="file" type='file' accept=".txt">
+    </form>
+    <button id="uploadFile">上傳附件</button>
+
+    <!-- <script src="../js/jQuery/jquery-1.11.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" charset="utf-8"></script>
+    <script>
+        $("uploadFile").on("click", function functionName() {
+            var file = $("#file").val();
+            if(file == null || file == "") {
+                alert("請上傳附件!!!");
+            } else {
+                var formData  = new FormData($("#uploadForm")[0]);
+
+                $.ajax({
+                    url: '@Url.Action("UploadFile","Test")',
+                    contentType: false,
+                    async: false,
+                    type: "POST",
+                    cache: false,
+                    processData: false,
+                    data: formData,
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log("FAIL: " + errorThrown);
+                    },
+                    success: function (data, textStatus, jqXHR) {
+                        var _msg = jQuery.parseJSON(data);
+                        alert(_msg);
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+</html>

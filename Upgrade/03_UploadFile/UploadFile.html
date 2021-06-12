@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <input type='file' id='fileinput'>
+        <input type='button' id='btnLoad' value='取得檔案大小'>
+    </p>
+    <!-- <script src="../js/jQuery/jquery-1.11.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" charset="utf-8"></script>
+    <script>
+    document.getElementById("btnLoad").addEventListener("click", function(event) {
+        /// <summary>
+        /// 取得檔案大小按鈕觸發事件
+        /// </summary>
+        var fileinput, getfile;
+
+        if (!window.FileReader) {
+            alert("file API 尚未支援此瀏覽器");
+            return;
+        }
+
+        fileinput = document.getElementById('fileinput');
+
+        if (!fileinput) {
+            txtAppend("p", "找不到 fileinput 元素");
+        } else if (!fileinput.files) {
+            txtAppend("p", "此瀏覽器不支援 input 中的 files 屬性");
+        } else if (!fileinput.files[0]) {
+            txtAppend("p", "請先選擇檔案在點擊取得檔案大小");
+        } else {
+            getfile = fileinput.files[0];
+            console.log(getfile);
+            txtAppend("p", "檔案大小 " + getfile.size + " bytes");
+            txtAppend("p", "檔案大小 " + getfile.size / 1024 + " KB");
+            txtAppend("p", "檔案大小 " + getfile.size / 1024 / 1024 + " MB");
+        }
+    }, false);
+
+    function txtAppend(tagName, innerHTML) {
+        /// <summary>
+        /// 附加 html 內容
+        /// </summary>
+        /// <param name="tagName">HTML tag 名稱</param>
+        /// <param name="innerHTML">HTML 內容</param>
+        var elm;
+        elm = document.createElement(tagName);
+        elm.innerHTML = innerHTML;
+        document.body.appendChild(elm);
+    }
+    </script>
+</body>
+</html>
